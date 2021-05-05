@@ -1,0 +1,78 @@
+<div class="py-5 text-center">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="mx-auto col-lg-6 col-10">
+        <h1>Basic Info</h1>
+        <p class="mb-3">Fill the student details&nbsp;</p>
+        <form class="text-left" ng-submit="vm.onCreate()" name="StudentDetails" novalidate>
+          <div class="form-group"  ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }"> 
+            <label for="form16">Your Name</label> <input type="text" class="form-control"
+              id="form16" name="name" ng-model="vm.name" required ng-minlength="3" ng-maxlength="25">
+              <p ng-show="StudentDetails.name.$error.minlength">Username is too short.</p>
+              <p ng-show="StudentDetails.name.$error.maxlength">Username is too long.</p>
+          </div>
+          <div class="form-group"> <label for="form17">School Name</label> <input type="text" class="form-control"
+              id="form17" name ="school" ng-model="vm.schoolName" noninteger>
+            <span ng-show="StudentDetails.school.$error.noninteger">Typo error!</span>
+          </div>
+          <div class="form-group"> <label for="form18">Your email</label> <input type="email" class="form-control"
+              id="form18" ng-model="vm.email" name="email" required gmail>
+              <p ng-show="StudentDetails.email.$error.gmail" >Your email is not of gmail.com domain </h1></p>
+              <!-- <span ng-show="form.size.$error.integer">The value is not a valid integer!</span> -->
+          </div>
+          <div class="form-group"> <label for="form25">Roll No</label> <input type="number" class="form-control"
+              id="form18" name="roll" ng-model="vm.rollNo" min="1" max="40" integer>
+              <p ng-show="StudentDetails.roll.$error.min || StudentDetails.roll.$error.max">
+                The value must be in range 0 to 40!</p>
+                <span ng-show="StudentDetails.school.$error.integer">The value is not a valid integer!</span>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6"> <label for="form19">Age</label> <input type="number" name="age" class="form-control"
+                id="form19" style="opacity: 0.5;" ng-model="vm.age"  min="5" max="18" integer>
+                <p ng-show="StudentDetails.age.$error.integer">The value is not a valid integer!</p>
+                <p ng-show="StudentDetails.age.$error.min || StudentDetails.age.$error.max">
+                  Your age is incorrect !</p>
+            </div>
+            <div class="form-group col-md-6"> <label for="form20">class</label> <input type="number"
+                class="form-control" id="form20" name="class" ng-model="vm.class"  min="1" max="12" integer>
+                <p ng-show="StudentDetails.class.$error.integer">The value is not a valid integer!</p>
+                <p ng-show="StudentDetails.class.$error.min || StudentDetails.class.$error.max">
+                 You enterd wrong class!</p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6"> <label for="form19">Maths</label> <input type="number"
+                class="form-control" id="form19"  style="opacity: 0.5;" name="maths" ng-model="vm.maths"   min="0" max="100" integer>
+                <p ng-show="StudentDetails.maths.$error.integer">You enterd wrong marks!</p>
+                <p ng-show="StudentDetails.maths.$error.min || StudentDetails.maths.$error.max">
+                  You enterd wrong marks!!</p>
+              </div>
+            <div class="form-group col-md-6"> <label for="form20">English</label> <input type="number"
+                class="form-control" id="form20"  ng-model="vm.english" name="english" min="0" max="100">
+                <p ng-show="StudentDetails.english.$error.integer">You enterd wrong marks!</p>
+                <p ng-show="StudentDetails.english.$error.min || StudentDetails.english.$error.max">
+                  You enterd wrong marks!!</p>
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6"> <label for="form19">Computer</label> <input type="number"
+                class="form-control" id="form19"  style="opacity: 0.5;" ng-model="vm.computer" name="computer" min="0" max="100">
+                <p ng-show="StudentDetails.computer.$error.integer">You enterd wrong marks!</p>
+                <p ng-show="StudentDetails.computer.$error.min || StudentDetails.computer.$error.max">
+                  You enterd wrong marks!!</p>
+              </div>
+            <div class="form-group col-md-6"> <label for="form20">Science</label> <input type="number"
+                class="form-control" id="form20"  ng-model="vm.science" name="science" min="0" max="100">
+                <p ng-show="StudentDetails.science.$error.integer">You enterd wrong marks!</p>
+                <p ng-show="StudentDetails.science.$error.min || StudentDetails.science.$error.max">
+                  You enterd wrong marks!!</p>
+              </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-secondary" ng-disabled="StudentDetails.$invalid">Create User</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

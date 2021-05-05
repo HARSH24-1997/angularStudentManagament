@@ -1,0 +1,94 @@
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="ml-auto col-lg-8 text-center text-lg-left">
+        <h1>Basic Insights</h1>
+        <p class="mb-0">To get the Avg ,Total Marks etc.</p>
+        <div class="container py-2">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Subject Name : {{vm.subjectName}}</h3>
+                    <h4 class="card-subtitle my-2 text-muted">Total Marks : {{vm.totalMarks}}</h4>
+                    <h4 class="card-subtitle my-2">Average Marks : {{vm.avg}}</h4>
+                    <h4 class="card-subtitle my-2">Count : {{vm.count}}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-around align-items-center p-5">
+        <select id="subject" class="form-select" aria-label="Subject" ng-model="vm.subject"
+          ng-change="vm.onFilter(subject)">
+          <option value="maths">Maths</option>
+          <option value="english">English</option>
+          <option value="computer">Computer</option>
+          <option value="science">Science</option>
+        </select>
+        <select id="class" class="form-select" aria-label="Class" ng-model="vm.class" ng-change="vm.onFilter(class)">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="ml-auto col-lg-8 text-center text-lg-left">
+        <h1>Subject Topper</h1>
+        <p class="mb-0">To get the Subject Topper.</p>
+        <div class="container py-2">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Subject Name : {{vm.topperSubject}}</h3>
+                    <h4 class="card-subtitle my-2 text-muted">Name : {{vm.topperName}}</h4>
+                    <h4 class="card-subtitle my-2">Marks : {{vm.topperMarks}}</h4>
+                    <!-- <h4 class="card-subtitle my-2"> : {{vm.count}}</h4> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-around align-items-center p-5">
+        <select id="subjectTopper" class="form-select" aria-label="Subject" ng-model="vm.subjectTopper"
+          ng-change="vm.onFilterTopper(subjectTopper)">
+          <option value="maths">Maths</option>
+          <option value="english">English</option>
+          <option value="computer">Computer</option>
+          <option value="science">Science</option>
+        </select>
+        <select id="classTopper" class="form-select" aria-label="Class" ng-model="vm.classTopper" ng-change="vm.onFilterTopper(classTopper)">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

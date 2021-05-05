@@ -1,0 +1,14 @@
+<div class="p-5">
+    <div class="container border-bottom p-5 ">
+        <div class="input-group mb-2">
+            <input type="text" class="form-control" placeholder="No Of Records to enter" ng-model="vm.numberRecords">
+            <button class="btn btn-outline-secondary" type="button" ng-click="vm.bulk()">Add</button>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <h2>Description</h2>
+        <p>Total Number of Records Succesfully Added : {{vm.success}}</p>
+        <p>Total Number of Records Fail to add : {{vm.error}}</p>
+    </div>

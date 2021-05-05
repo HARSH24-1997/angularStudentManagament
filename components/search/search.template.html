@@ -1,0 +1,48 @@
+<div class="py-3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-inline justify-content-center" ng-submit="vm.onSearch()">
+          <div class="input-group input-group-lg w-50">
+            <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Search"
+              ng-model="vm.search">
+            <div class="input-group-append"><button class="btn btn-primary" type="submit"><i
+                  class="fa fa-search"></i></button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="text-center"> Results ! </h2>
+<div class="container"  ng-repeat="res in vm.searchArr">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Student Name : {{res.name}}</h3>
+          <h4 class="card-subtitle my-2 text-muted">School Name : {{res.school}}</h4>
+          <p class="card-text">
+            Age : {{res.age}}
+          </p>
+          <p class="card-text">
+            Class : {{res.class}}
+          </p>
+          <p class="card-text">
+            Roll no : {{res.rollNo}}
+          </p>
+          <!-- <a href="#" class="card-link>open</a> -->
+          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=#model{{res.rollNo}}>
+            open
+          </button> -->
+          <button type="button" class="btn btn-primary" ng-click="vm.open('sm')">
+            open
+          </button>
+          <div class="model{{res.rollNo}}div">
+          </div>
+          <!-- <model details="res"></model> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
