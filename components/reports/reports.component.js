@@ -24,8 +24,8 @@ function ReportsController (mainService){
     .then(result=>{
         if(result.data[0]!=null || result.data[0]!=undefined){
         var resp  =  result.data[0];
-        // vm.count = 
-        // vm.avg = ""
+        vm.count = resp.Count;
+        vm.avg = resp.Average
         vm.totalMarks = resp.TotalMarks;
         vm.subjectName = resp._id.subject;
         }

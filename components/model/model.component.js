@@ -6,15 +6,12 @@ function ModelController (mainService){
           })
         console.log(myModal);
         console.log(myModal.hide());
-    }   
-}
+    }
 
+}
 
 model.component("model",{
     templateUrl: 'components/model/model.template.html',
-    require: {
-        'parent': '^search'
-    },
     controller: ModelController,
     controllerAs: 'vm',
     bindings : {

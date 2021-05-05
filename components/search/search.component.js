@@ -15,8 +15,7 @@ function SearchController (mainService){
         .catch(err=>{
             console.error(err);
         })
-    }     
-    
+    }
 }
 
 search.component("search",{
@@ -24,4 +23,3 @@ search.component("search",{
     controller:['mainService',SearchController],
     controllerAs: 'vm'
 })
-
