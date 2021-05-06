@@ -32,10 +32,12 @@
             Roll no : {{res.rollNo}}
           </p>
           <!-- <a href="#" class="card-link>open</a> -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=#model{{res.rollNo}}>
+          <button type="button" class="btn btn-primary" ng-click="vm.open('lg','.modelopen')">
             open
           </button>
-          <model details="res"></model>
+          <div class="modelopen"></div>
+
+          <!-- <model details="res"></model> -->
         </div>
       </div>
     </div>
