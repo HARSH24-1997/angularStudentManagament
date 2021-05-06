@@ -1,12 +1,20 @@
 function ModelController (mainService){
     var vm = this;
-    vm.close = function(){
-        var myModal = new bootstrap.Modal(document.getElementById('model'+this.details.rollNo), {
-            keyboard: false
-          })
-        console.log(myModal);
-        console.log(myModal.hide());
-    }
+    vm.rank = '';
+    vm.studentTotalMarks = "";
+    this.$onInit = function() {
+    mainService.rank(vm.details.class)
+    .then((resp)=>{
+        var arr = resp.data;
+        console.log(arr,"dfdf");
+         vm.rank = arr.findIndex((elem)=> elem._id.name == vm.details.name );
+         vm.studentTotalMarks = arr[vm.rank]._id.Totalmarks;
+         vm.rank = vm.rank + 1; 
+    })
+    .catch(err=>{
+        console.log(err);
+    })    
+    };
 
 }
 

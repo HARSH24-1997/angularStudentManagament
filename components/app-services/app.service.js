@@ -21,7 +21,7 @@ api.service('mainService', function($http){
         return $http.post('http://localhost:3000/reports/subjectTopper',JSON.stringify(data));
     }
     this.rank = function(data){
-        return $http.get('http://localhost:3000/reports/rank',JSON.stringify(data));
+        return $http.post('http://localhost:3000/reports/rank',{ class: data});
     }
 })
 

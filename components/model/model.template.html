@@ -1,4 +1,4 @@
-<div class="modal" id=model{{vm.details.rollNo}} tabindex="-1" role="dialog">
+<div class="modal" id=model{{vm.details.rollNo}}{{vm.details.name}} tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -10,9 +10,9 @@
       <div class="modal-body">
         <p>Student Name : {{vm.details.name}}</p>
         <!-- <p>Student Class : </p> -->
-        <p>Student Roll No. : </p>
-        <p>Student Total Marks : </p>
-        <p>Student Rank : </p>
+        <p>Student Roll No. : {{vm.details.rollNo}}</p>
+        <p>Student Total Marks : {{vm.studentTotalMarks}}</p>
+        <p>Student Rank : {{vm.rank}}</p>
       </div>
     </div>
   </div>
