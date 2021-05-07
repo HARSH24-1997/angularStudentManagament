@@ -5,9 +5,10 @@ var api = angular.module('api', []);
 //     vm.serviceCreate = mainService.createUser;
 // });
 
-
-
 api.service('mainService', function($http){
+
+    // var childClass = Object.create(BaseService);
+
     this.createUser = function(data){
         return  $http.post('http://localhost:3000/create',JSON.stringify(data));
     }
@@ -21,7 +22,7 @@ api.service('mainService', function($http){
         return $http.post('http://localhost:3000/reports/subjectTopper',JSON.stringify(data));
     }
     this.rank = function(data){
-        return $http.get('http://localhost:3000/reports/rank',JSON.stringify(data));
+        return $http.post('http://localhost:3000/reports/rank',{class:data});
     }
 })
 
